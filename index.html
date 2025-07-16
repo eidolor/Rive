@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Rive Animation Portfolio</title>
+    <style>
+        /* Basic styling to center the animation */
+        body, html { margin: 0; padding: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; background-color: #f0f0f0; }
+        canvas { width: 800px; height: 600px; }
+    </style>
+</head>
+<body>
+
+    <canvas id="rive-canvas" width="800" height="600"></canvas>
+
+    <script src="https://unpkg.com/rive-canvas@2.9.1/rive.js"></script>
+
+    <script>
+        const r = new rive.Rive({
+            // Tells Rive where to find the .riv file
+            src: 'animation.riv', 
+            // Tells Rive which canvas element to draw on
+            canvas: document.getElementById('rive-canvas'),
+            // Tells Rive to automatically play the animation
+            autoplay: true,
+            // You can specify a state machine to use here if you have one
+            // stateMachines: "State Machine 1", 
+            onLoad: () => {
+                r.resizeToCanvas();
+            },
+        });
+    </script>
+
+</body>
+</html>
