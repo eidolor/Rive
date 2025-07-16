@@ -18,13 +18,13 @@
         import { Rive } from 'https://unpkg.com/rive-canvas@2.9.1/rive.js';
 
         new Rive({
-            // Make sure this filename is correct
-            src: 'button.riv', 
+            // CORRECTED: This now points to your actual file
+            src: 'FirstGo.riv', 
             
             canvas: document.getElementById('rive-canvas'),
             autoplay: true,
             
-            // Make sure this state machine name is correct
+            // This is the default state machine name. Double-check it in the Rive editor.
             stateMachines: "State Machine 1",
             
             onLoad: (event) => {
